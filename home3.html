@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Inspiration</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+            color: #333;
+        }
+        .header {
+    display: flex;
+    flex-direction: row; /* Align items side by side */
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(to bottom,  #154360  23%, #330c43 95%);
+    color: white;
+    padding: 20px;
+    height: 100vh; /* Makes the header take the full screen height */
+   
+}
+        }
+        .navbar {
+            width: 30%; /* Set navbar width */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px; /* Adds padding to the left */
+      
+        }
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .logo span {
+            color: #f39c12;
+        }
+        .links {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+            
+			
+        }
+        .links li {
+            margin: 15px 0;
+			
+        }
+        .links a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+    text-align: left;
+}
+        .links a:hover {
+            background-color: #f39c12;
+            color: white;
+			
+        }
+        .hero-section {
+            width: 70%; /* Adjust width to complement navbar */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .hero {
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-size: 24px;
+            color: #222;
+        }
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+}
+
+.img img {
+  width: 100px;
+  height: 100px;
+}
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar, .hero-section {
+                width: 100%;
+            }
+            .hero-section {
+                text-align: left;
+				 background-color: skyblue; /* Matches the page's background color */
+    padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h2 class="logo">
+                <a href="http://csp.freesite.online/">Digital <span>Inspiration</span></a>
+            </h2>
+            <ul class="links">
+                <li>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSddJ9n-kJR5KGgGjDYPVF4wCZM4k9JSu0cgHFbvPONbfDYIbA/viewform?usp=sf_link">
+                        <i class="fa-solid fa-square-poll-vertical"></i> CES-Report
+                    </a>
+                </li>
+                <li>
+                    <a href="https://script.google.com/a/~/macros/s/AKfycbxVGvV8XihJDN_vSM7JZFmSbUc7kUsNXFO27wghXhfXZZeuj915NhIFpPjp-eVbDmAZ/exec">
+                        <i class="fa-solid fa-list"></i> Sports [Registered List]
+                    </a>
+                </li>
+                <li>
+                    <a href="https://script.google.com/a/~/macros/s/AKfycbwgIp-D4plJQshIrneERwbSm0WRoLKa7qXKwDxUHaYW_MeCHiMz1Y7ZY6OOgAKbs2S65A/exec">
+                        <i class="fa-solid fa-address-card"></i> Monthly Attendance
+                    </a>
+                </li>
+				<li>
+                    <a href="https://script.google.com/a/~/macros/s/AKfycbzSpUzwse0h7NXSGqhtMAQ_hr9hGsSAFkizMJeAfWbK4odWbg6hOxYF-718vs6WzTjd/exec">
+                        <i class="fa-solid fa-download"></i> File Downloader
+                    </a>
+                </li>
+                <li>
+                    <a href="https://script.google.com/a/~/macros/s/AKfycbx8P-D6lZjQwYhKCD_RmQXCX-89bnuh43OFfS-02OdQINPOFahqSZGVWYjXY4fCG8K3/exec">
+                        <i class="fa-solid fa-calendar-week"></i> Daily Attendance
+                    </a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/uc?export=download&id=1-esBwPxRFvotKegPO4pawoTgM_SDpZzo">
+                        <i class="fa-solid fa-download"></i> Android App
+                    </a>
+                </li>
+                 <li>
+                    <a href="https://script.google.com/a/~/macros/s/AKfycbxkAshFjh3jZvvGiRGkV2EkQ6Fo4P3OnO8npkb3T8Cq5sl26ZrgJ_gefGh8vbTtKQ7y/exec">
+                        <i class="fa-solid fa-file-lines"></i> Student Attendance Report
+                    </a>
+                </li>
+                 
+            </ul>
+        </nav>
+        
+    </header>
+	<div class="img">
+            <img src="https://i.ibb.co/MSXf3gq/5765-png-1200-removebg-preview.png"  alt="hero image" />
+        </div>
+</body>
+</html>
