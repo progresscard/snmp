@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressions-2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            animation: gradientShift 5s infinite alternate ease-in-out;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background: linear-gradient(135deg, #1d2671, #c33764);
+            }
+            100% {
+                background: linear-gradient(135deg, #c33764, #1d2671);
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            height: 50px;
+            background:  #C70039 ; /* New color: soft green */
+            color: #fff;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 50px;
+            z-index: 2;
+        }
+
+        .iframe-wrapper {
+            flex: 1; /* Ensures the iframe takes the remaining height */
+            position: relative;
+        }
+
+        .iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .animated-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            animation: borderGlow 6s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="animated-border"></div>
+        <div class="header">
+          Impressions-2024: The Annual Magazine
+        </div>
+        <div class="iframe-wrapper">
+            <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" style="border: 1px solid lightgray; width: 100%; height: 100%;" src="https://heyzine.com/flip-book/bac521a051.html#page/1"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

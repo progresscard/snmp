@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .sidebar {
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #042331;
+        transition: all .5s ease;
+      }
+      .sidebar header {
+        font-size: 22px;
+        color: white;
+        line-height: 70px;
+        text-align: center;
+        background: #063146;
+        user-select: none;
+      }
+      .sidebar ul a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 50px;
+        font-size: 15px;
+        color: white;
+        padding-left: 15px;
+        box-sizing: border-box;
+        border-bottom: 1px solid black;
+        border-top: 1px solid rgba(255,255,255,.1);
+        transition: .4s;
+      }
+      ul li:hover a {
+        padding-left: 50px;
+      }
+      .sidebar ul a i {
+        margin-right: 16px;
+      }
+      #check {
+        display: none;
+      }
+      label #btn, label #cancel {
+        position: absolute;
+        background: #042331;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      label #btn {
+        left: 40px;
+        top: 25px;
+        font-size: 35px;
+        color: white;
+        padding: 6px 12px;
+        transition: all .5s;
+      }
+      label #cancel {
+        z-index: 1111;
+        left: -195px;
+        top: 17px;
+        font-size: 30px;
+        color: #0a5275;
+        padding: 4px 9px;
+        transition: all .5s ease;
+      }
+      #check:checked ~ .sidebar {
+        left: 0;
+      }
+      #check:checked ~ label #btn {
+        left: 250px;
+        opacity: 0;
+        pointer-events: none;
+      }
+      #check:checked ~ label #cancel {
+        left: 195px;
+      }
+      #check:checked ~ section {
+        margin-left: 250px;
+      }
+      section {
+        background: url(bg2.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        flex-grow: 1;
+        transition: all .5s;
+      }
+      #content {
+        margin-left: 10%;
+        margin-top: 5%;
+      }
+      /* CSS for the year buttons */
+      #year {
+        font-family: Arial, sans-serif;
+        margin-left: 0%;
+        text-align: left;
+        margin-top: 20px;
+      }
+      .year-button {
+        text-decoration: none;
+        color: #fff;
+        background-color: seagreen;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 10px 0;
+        display: block;
+        transition: background-color 0.3s, color 0.3s;
+        width: 200px; /* Make the button width equal */
+        text-align: left; /* Align text to the left */
+      }
+      .year-button:hover {
+        background-color: red;
+        color: white;
+      }
+      .year-button i {
+        margin-right: 10px;
+      }
+      #footer {
+        color: white;
+        background-color: #1c2833;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+        margin-top: auto;
+      }
+      #snm {
+        margin-left: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header><img src="csp.png" alt="Designer's Image" width="120px" height="25px"></header>
+      <ul>
+        <li><a href="home1.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="https://script.google.com/a/~/macros/s/AKfycbwY-6hiT6v8y-W5YxlHLHeUz-B34JpoPBek5YV2-MXokGax9eXEmVy9lNsijSvaMMip/exec"><i class="fa-solid fa-square-poll-vertical"></i>Exam Result</a></li>
+        <li><a href="x.html"><i class="fa-solid fa-book-open-reader"></i>Study material</a></li>
+        <li><a href="https://script.google.com/a/~/macros/s/AKfycbzOQJKPsDw8a5QqXRU1p-28upC6_1yX8KguREQhHcGBScxvHwvCYuzITPMT_paqAJzM/exec"><i class="fa-solid fa-id-card"></i>ID Card</a></li>
+        <li><a href="https://script.google.com/a/~/macros/s/AKfycbzkrXp1j9FYwFiKrfHM5w35Hdkg2cUNglAlgHMEhcUyrKLgKtROpREVLSXEPlsCF2M/exec"><i class="fa-solid fa-unlock-keyhole"></i>Coordinator Login</a></li>
+        <li><a href="https://script.google.com/a/~/macros/s/AKfycbwEkPfg2xQbo4opLKKRbEp9YHPUoamaDPzbRxfGYH46o0bvvSfbF0ZbQaOHUbqo1Vn7/exec"><i class="fa-solid fa-unlock-keyhole"></i>User Login</a></li>
+        <li><a href="https://script.google.com/a/~/macros/s/AKfycbwLdtvqstKkcpjkOvaoreuXtmKxuqJq8QjHrSDEkMtfIQvnASSeM2lPE8zNHBr9567j/exec"><i class="fa-solid fa-certificate"></i>SIP Certificate</a></li>
+        <li><a href="https://script.google.com/a/~/macros/s/AKfycbzr_qNZsKQv5739im8eJZuIWFrgYyYjL4bYAegM13E26ru0Be9yppcR2WCEbhvAw4tw/exec"><i class="fa-solid fa-download"></i>Downloader</a></li>
+        <li><a href="magazine.html"><i class="fa-solid fa-download"></i>Impressions-2025</a></li>
+      </ul>
+    </div>
+    <section>
+      <br><div id="snm"><p><font color="white" size="6" face="Bookman Old Style"><center><b>S N MUDBIDRI POLYTECHNIC</b></center></font></p>
+      <br><p><font color="red" size="5" face="Bookman Old Style"><center>Students Progress Card</center></font></p></div>
+      <p></p>
+      <div id="content">
+        <font color="Yellow" size="5" face="Bookman Old Style">Download your progress card <i class="fa-solid fa-circle-down"></i></font><br><br><br>
+        <div id="year">
+          <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdGsp_EIAedF9Sjf4xCe1XbUiWoc2odMCF2bHqu2y2xuw-8AA/viewform?usp=sf_link" class="year-button"><i class="fa-solid fa-download"></i>First Year</a></P><br>
+          <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfQzGiks7-055qSUsopkUwL585wkxT3BGMzyRhrf-VV9WZI_w/viewform?usp=sf_link" class="year-button"><i class="fa-solid fa-download"></i>Second Year</a></p><br>
+          <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdgypzz2yjg1aKXU5Kz2puhnabe82YyQutvRcjM2XWX1rOMrQ/viewform?usp=sf_link" class="year-button"><i class="fa-solid fa-download"></i>Third Year</a></p>
+        </div>
+      </div>
+    </section>
+    <div id="footer">
+      <table width="100%" border="0">
+        <tr>
+          <td><marquee behavior="alternate" scrollamount="2"><font size="2" color="white">Designed by: C S Pradeep Kumar |  <font color="red">|</font> 8147356664 <font color="red">
